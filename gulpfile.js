@@ -4,41 +4,39 @@ const gulp = require('gulp'),
   sass = require('gulp-sass'),
   cssmin = require('gulp-cssmin'),
   autoprefixer = require('gulp-autoprefixer'),
-  watch = require('gulp-watch'),
   plumber = require('gulp-plumber'),
   notify = require('gulp-notify');
 
 gulp.task('sass', function(){
-  const scss = filter([
+
+  const f_scss = filter([
       '**/*.scss',
       '!**/site.scss',
       '!**/site/*'
     ], {restore: true}),
-    css = filter([
+    f_css = filter([
       '**/*.css',
       '!**/site.css',
       '!**/site/*',
       '!**/normalize.css'
-    ]),
-    run = function(){
-      return gulp.src([
-          './node_modules/normalizecss/normalize.css',
-          './source/sass/**/*.scss'
-        ])
-        .pipe(plumber())
-        .pipe(scss)
-        .pipe(gulp.dest('./dist/scss/'))
-        .pipe(scss.restore)
-        .pipe(sass())
-        .pipe(autoprefixer())
-        .pipe(cssmin())
-        .pipe(gulp.dest('./assets/css/'))
-        .pipe(notify('Sass compiled'))
-        .pipe(css)
-        .pipe(gulp.dest('./dist/'));
-    };
-    watch('./source/sass/**/*.scss', run);
-    return run();
+    ], {restore: true});
+
+  return gulp.src([
+      './node_modules/normalizecss/normalize.css',
+      './source/sass/**/*.scss'
+    ])
+    .pipe(plumber())
+    .pipe(f_scss)
+    .pipe(gulp.dest('./dist/scss/'))
+    .pipe(f_scss.restore)
+    .pipe(sass())
+    .pipe(autoprefixer())
+    .pipe(cssmin())
+    .pipe(gulp.dest('./assets/css/'))
+    .pipe(notify('Sass compiled'))
+    .pipe(f_css)
+    .pipe(gulp.dest('./dist/'));
+
 });
 
 gulp.task('js', function(){});
@@ -53,4 +51,8 @@ gulp.task('webserver', function() {
     .pipe(notify('Started webserver'));
 });
 
-gulp.task('default', ['sass', 'webserver'])
+gulp.task('watch', function(){
+  gulp.watch('./source/sass/**/*.scss', ['sass']);
+});
+
+gulp.task('default', ['sass', 'webserver', 'watch'])
