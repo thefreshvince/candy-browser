@@ -19,7 +19,10 @@ gulp.task('sass', function(){
       '!**/site/*'
     ]);
     watch('./source/sass/**/*.scss', function () {
-      gulp.src('./source/sass/**/*.scss')
+      gulp.src([
+          './node_modules/normalizecss/normalize.css',
+          './source/sass/**/*.scss'
+        ])
         .pipe(scss)
         .pipe(gulp.dest('./dist/scss/'))
         .pipe(scss.restore)
