@@ -5,6 +5,7 @@ const gulp = require('gulp'),
   cssmin = require('gulp-cssmin'),
   autoprefixer = require('gulp-autoprefixer'),
   watch = require('gulp-watch'),
+  plumber = require('gulp-plumber'),
   notify = require('gulp-notify');
 
 gulp.task('sass', function(){
@@ -24,6 +25,7 @@ gulp.task('sass', function(){
           './node_modules/normalizecss/normalize.css',
           './source/sass/**/*.scss'
         ])
+        .pipe(plumber())
         .pipe(scss)
         .pipe(gulp.dest('./dist/scss/'))
         .pipe(scss.restore)
