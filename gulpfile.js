@@ -16,10 +16,11 @@ gulp.task('sass', function(){
     css = filter([
       '**/*.css',
       '!**/site.css',
-      '!**/site/*'
-    ]);
-    watch('./source/sass/**/*.scss', function () {
-      gulp.src([
+      '!**/site/*',
+      '!**/normalize.css'
+    ]),
+    run = function(){
+      return gulp.src([
           './node_modules/normalizecss/normalize.css',
           './source/sass/**/*.scss'
         ])
@@ -33,7 +34,9 @@ gulp.task('sass', function(){
         .pipe(notify('Sass compiled'))
         .pipe(css)
         .pipe(gulp.dest('./dist/'));
-    });
+    };
+    watch('./source/sass/**/*.scss', run);
+    return run();
 });
 
 gulp.task('js', function(){});
