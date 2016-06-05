@@ -4,7 +4,8 @@ const gulp = require('gulp'),
   sass = require('gulp-sass'),
   cssmin = require('gulp-cssmin'),
   autoprefixer = require('gulp-autoprefixer'),
-  watch = require('gulp-watch');
+  watch = require('gulp-watch'),
+  notify = require('gulp-notify');
 
 gulp.task('sass', function(){
   const scss = filter([
@@ -17,19 +18,31 @@ gulp.task('sass', function(){
       '!**/site.css',
       '!**/site/*'
     ]);
-  return gulp.src('./source/sass/**/*.scss')
-    .pipe(watch('./source/sass/**/*.scss'))
-    .pipe(scss)
-    .pipe(gulp.dest('./dist/scss/'))
-    .pipe(scss.restore)
-    .pipe(sass())
-    .pipe(autoprefixer())
-    .pipe(cssmin())
-    .pipe(gulp.dest('./assets/css/'))
-    .pipe(css)
-    .pipe(gulp.dest('./dist/'));
+    watch('./source/sass/**/*.scss', function () {
+      gulp.src('./source/sass/**/*.scss')
+        .pipe(scss)
+        .pipe(gulp.dest('./dist/scss/'))
+        .pipe(scss.restore)
+        .pipe(sass())
+        .pipe(autoprefixer())
+        .pipe(cssmin())
+        .pipe(gulp.dest('./assets/css/'))
+        .pipe(notify('Sass compiled'))
+        .pipe(css)
+        .pipe(gulp.dest('./dist/'));
+    });
 });
 
-gulp.task('js', function(){
+gulp.task('js', function(){});
 
+gulp.task('webserver', function() {
+  gulp.src('./')
+    .pipe(webserver({
+      livereload: true,
+      open: true,
+      fallback: 'index.html'
+    }))
+    .pipe(notify('Started webserver'));
 });
+
+gulp.task('default', ['sass', 'webserver'])
