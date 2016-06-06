@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Candybrowser</title>
-  <link href='https://fonts.googleapis.com/css?family=Slackey' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Slackey|Source+Code+Pro' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/animate.css">
   <link rel="stylesheet" href="assets/css/prism.css">
@@ -21,16 +21,17 @@
               <div class="cb__decorative-buttons">
                 <span class="cb__close animated bounceInDown animated-delay-1"></span>
                 <span class="cb__minify animated bounceInDown animated-delay-3"></span>
-                <span class="cb__fullscreen animated bounceInDown animated-delay-5"></span>
+                <a href="#explode" onClick="document.getElementById('splash__window').classList.toggle('cb__window--explode')" class="cb__fullscreen animated bounceInDown animated-delay-5"></a>
               </div>
               <nav class="cb__tabs">
                 <a href="#tab1" data-theme="default" class="cb__tab cb__tab--current animated bounceInDown animated-delay-7">Default Theme</a>
-                <a href="#tab2" data-theme="orange" class="cb__tab animated bounceInDown animated-delay-8">Orange</a>
+                <a href="#tab3" data-theme="explode" class="cb__tab animated bounceInDown animated-delay-8">Explode</a>
                 <a href="#tab2" data-theme="purple" class="cb__tab animated bounceInDown animated-delay-9">Purple</a>
                 <a href="#tab3" data-theme="blue" class="cb__tab animated bounceInDown animated-delay-10">Blue</a>
                 <a href="#tab3" data-theme="green" class="cb__tab animated bounceInDown animated-delay-11">Green</a>
-                <a href="#tab3" data-theme="disco" class="cb__tab animated bounceInDown animated-delay-12">Disco</a>
-                <a href="#tab3" data-theme="rave" class="cb__tab animated bounceInDown animated-delay-12">Rave</a>
+                <a href="#tab2" data-theme="orange" class="cb__tab animated bounceInDown animated-delay-12">Orange</a>
+                <a href="#tab3" data-theme="disco" class="cb__tab animated bounceInDown animated-delay-13">Disco</a>
+                <!-- <a href="#tab3" data-theme="rave" class="cb__tab animated bounceInDown animated-delay-13">Rave</a> -->
               </nav>
               <div class="cb__nav">
                 <div class="cb__buttons">
@@ -38,7 +39,9 @@
                   <a href="#forward" class="cb__forward animated bounceInDown animated-delay-4"></a>
                   <a href="#refresh" class="cb__refresh animated bounceInLeft animated-delay-6"></a>
                 </div>
-                <input type="text" value="&#128196; http://yoursite.com"  class="cb__address animated bounceInRight" readonly />
+                <div class="cb__addresscontainer">
+                  <input type="text" value="&#128196; http://yoursite.com"  class="cb__address animated bounceInRight" readonly />
+                </div>
               </div>
             </header>
             <div class="cb__body">
@@ -47,15 +50,22 @@
 
                 <div class="somecontent">
 
-                  <h1>Candybrowser</h1>
+                  <h1>
+                    <span class="animated bounceInDown animated-delay-10 h--1">C</span>
+                    <span class="animated bounceInDown animated-delay-11 h--2">a</span>
+                    <span class="animated bounceInDown animated-delay-12 h--3">n</span>
+                    <span class="animated bounceInDown animated-delay-13 h--4">d</span>
+                    <span class="animated bounceInDown animated-delay-14 h--5">y</span>
+                    <span class="animated bounceInDown animated-delay-15 h--6">b</span>
+                    <span class="animated bounceInDown animated-delay-16 h--7">r</span>
+                    <span class="animated bounceInDown animated-delay-17 h--8">o</span>
+                    <span class="animated bounceInDown animated-delay-18 h--9">w</span>
+                    <span class="animated bounceInDown animated-delay-19 h--10">s</span>
+                    <span class="animated bounceInDown animated-delay-20 h--11">e</span>
+                    <span class="animated bounceInDown animated-delay-21 h--12">r</span>
+                  </h1>
 
-                  <p>A fully HTML5/CSS3 frame that is the most delicious way to show content that needs browserception.</p>
-
-                  <a href="#why">...But Why?</a>
-
-                  <a href="#download" class="button">Download</a>
-
-                  <a href="#documentation" class="button">Docs</a>
+                  <p>A fully HTML5/CSS3 frame that is the most delicious way to implement browserception.</p>
 
                 </div>
 
@@ -151,16 +161,33 @@
 
   </section>
 
+  <section>
+
+    <h2>But Why?...</h2>
+
+    <p>Glad you asked! here are a few reasons why i think Candybrowser is rad.</p>
+
+    <ul>
+      <li>Screenshots of browsers suuuuuuuck! They detract from the feel of the site and the content they hold. This is why a fully themeable html/css solution is so $$</li>
+      <li>Being able to animate the individual pieces is awesome and fun!</li>
+      <li>The buttons and address bar don't become mangled on lower resolutions. They maintain ther crispness and resize appropriately.</li>
+      <li>If you're using it for different projects in a portfolio, you can theme it to fit whichever project's style.</li>
+    </ul>
+
+  </section>
+
   <script src="assets/js/prism.js"></script>
 
   <script>
 
     (function(){
 
-      var splash = document.getElementById('splash'),
-          exploded = document.getElementById('cb__exploded'),
-          winWidth = window.innerWidth,
-          winHeight = window.innerHeight,
+      var win = window,
+          doc = document,
+          splash = doc.getElementById('splash'),
+          exploded = doc.getElementById('cb__exploded'),
+          winWidth = win.innerWidth,
+          winHeight = win.innerHeight,
           thresh = 30,
           threshStart = -(thresh/2),
           rotY = '',
@@ -170,12 +197,14 @@
           };
 
       splash.addEventListener('mousemove', function(e){
-
         rotX = 'rotateY('+(e.clientX/winWidth * thresh + threshStart)+'deg) ';
         rotY = 'rotateX('+-(e.clientY/winHeight * thresh + threshStart)+'deg)';
-
         requestAnimationFrame(updateElem);
+      });
 
+      win.addEventListener('resize', function(){
+        winWidth = win.innerWidth,
+        winHeight = win.innerHeight
       });
 
     })();
