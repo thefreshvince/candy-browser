@@ -1,11 +1,8 @@
 .cb__decorative-buttons{
   position: absolute;
   box-sizing: border-box;
-
   padding: 0px 0.5%;
-
   width: 60px;
-
   font-size: 0;
 }
 
@@ -14,10 +11,8 @@
 .cb__fullscreen{
   position: relative;
   display: inline-block;
-
   width: 33.3333%;
   height: $cb-tabs-height;
-
   line-height: $cb-tabs-height;
   text-align: center;
 
@@ -25,11 +20,8 @@
     content: '';
     display: inline-block;
     vertical-align: middle;
-
     padding-bottom: 50%;
-
     width: 50%;
-
     border-radius: 50%;
     border: 1px solid #aaa;
     background: #ccc;
