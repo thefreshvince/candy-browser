@@ -1,0 +1,52 @@
+.cb__decorative-buttons{
+  position: absolute;
+  box-sizing: border-box;
+
+  padding: 0px 0.5%;
+
+  width: 60px;
+
+  font-size: 0;
+}
+
+.cb__close,
+.cb__minify,
+.cb__fullscreen{
+  position: relative;
+  display: inline-block;
+
+  width: 33.3333%;
+  height: $cb-tabs-height;
+
+  line-height: $cb-tabs-height;
+  text-align: center;
+
+  &:before{
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+
+    padding-bottom: 50%;
+
+    width: 50%;
+
+    border-radius: 50%;
+    border: 1px solid #aaa;
+    background: #ccc;
+  }
+}
+
+  .cb__close:before{
+    border: 1px solid $cb-danger-border-color;
+    background: $cb-danger-color;
+  }
+
+  .cb__minify:before{
+    border: 1px solid $cb-warning-border-color;
+    background: $cb-warning-color;
+  }
+
+  .cb__fullscreen:before{
+    border: 1px solid $cb-success-border-color;
+    background: $cb-success-color;
+  }
