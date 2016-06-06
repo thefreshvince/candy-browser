@@ -18,11 +18,13 @@ gulp.task('sass', function(){
       '**/*.css',
       '!**/site.css',
       '!**/site/*',
-      '!**/normalize.css'
+      '!**/normalize.css',
+      '!**/animate.css'
     ], {restore: true});
 
   return gulp.src([
       './node_modules/normalizecss/normalize.css',
+      './node_modules/animate.css/animate.css',
       './source/sass/**/*.scss'
     ])
     .pipe(plumber())
