@@ -33,16 +33,25 @@ h4, h5, h6 {
   -webkit-animation: hover 5s infinite ease-in-out;
           animation: hover 5s infinite ease-in-out; }
 
-.cb__window.cb__window--blue .cb__tab,
-.cb__window.cb__window--blue .cb__nav,
-.cb__window.cb__window--blue .cb__address,
-.cb__window.cb__window--blue .cb__back, .cb__window.cb__window--blue .cb__forward, .cb__window.cb__window--blue .cb__refresh {
-  color: #6666ff; }
+.cb__window--disco {
+  -webkit-animation-name: Disco;
+          animation-name: Disco;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; }
 
-.cb__window.cb__window--blue .cb__close:before, .cb__window.cb__window--blue .cb__minify:before,
-.cb__window.cb__window--blue .cb__fullscreen:before {
-  border-color: #4d4dff;
-  background: #6666ff; }
+.cb__window--rave {
+  -webkit-animation-name: Rave;
+          animation-name: Rave;
+  -webkit-animation-duration: 0.25s !important;
+          animation-duration: 0.25s !important;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; }
 
 .animated-delay-1 {
   -webkit-animation-delay: 0.125s;
@@ -225,6 +234,44 @@ h4, h5, h6 {
   100% {
     -webkit-transform: translate3d(0, 0px, 0);
             transform: translate3d(0, 0px, 0); } }
+
+@-webkit-keyframes Disco {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg); }
+  100% {
+    -webkit-filter: hue-rotate(359deg);
+            filter: hue-rotate(359deg); } }
+
+@keyframes Disco {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg); }
+  100% {
+    -webkit-filter: hue-rotate(359deg);
+            filter: hue-rotate(359deg); } }
+
+@-webkit-keyframes Rave {
+  0% {
+    -webkit-filter: brightness(1) invert(100%);
+            filter: brightness(1) invert(100%); }
+  50% {
+    -webkit-filter: brightness(4) invert(100%);
+            filter: brightness(4) invert(100%); }
+  100% {
+    -webkit-filter: hue-rotate(2) invert(100%);
+            filter: hue-rotate(2) invert(100%); } }
+
+@keyframes Rave {
+  0% {
+    -webkit-filter: brightness(1) invert(100%);
+            filter: brightness(1) invert(100%); }
+  50% {
+    -webkit-filter: brightness(4) invert(100%);
+            filter: brightness(4) invert(100%); }
+  100% {
+    -webkit-filter: hue-rotate(2) invert(100%);
+            filter: hue-rotate(2) invert(100%); } }
 
 .cb__exploded {
   max-width: 100%;
