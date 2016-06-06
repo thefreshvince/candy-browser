@@ -2,7 +2,7 @@
  *  General
  */
 
-$cb-font-size: 16px;
+$cb-font-size: 15px;
 
 $cb-transition-length: 0.4s;
 
@@ -23,7 +23,7 @@ $cb-success-border-color: #4cae4c;
  *  Border
  */
 
-$cb-border-color: $cb-background-color;
+$cb-border-color: darken($cb-background-color,3%);
 $cb-border-size: 1px;
 $cb-border-top-left-radius: 5px;
 $cb-border-top-right-radius: 5px;
