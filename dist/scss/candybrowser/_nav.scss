@@ -31,6 +31,7 @@
     font-size: $cb-font-size;
     text-align: center;
     color: $cb-font-color;
+    backface-visibility: hidden;
 
     &:before{
       display: inline-block;
@@ -39,7 +40,9 @@
   }
 
   .cb__back:before{
-    content: '\2190';
+    content: '\2192';
+    transform: rotate(180deg);
+    transform-origin: center 52%;
   }
 
   .cb__forward:before{
