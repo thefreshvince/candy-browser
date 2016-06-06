@@ -1,0 +1,68 @@
+// See ./_variables.scss
+
+@each $color, $hex in $cb-themes{
+
+  .cb__window.cb__window--#{$color}{
+    $color-outside: lighten($hex,5%);
+    $color-outside_alt: lighten($color-outside,15%);
+    $color-white: #fff;
+    background-color: $color-outside_alt;
+    border-color: $color-outside_alt;
+
+    .cb__address{
+      color: #fff;
+      background: $color-outside;
+      border: $cb-border-size solid $color-outside_alt;
+    }
+
+    .cb__tab,
+    .cb__back, .cb__forward, .cb__refresh{
+      color: $color-outside;
+      border: none;
+    }
+
+    .cb__tabs:before{
+      box-shadow: inset 0 -1px 0px 0px $color-outside_alt;
+    }
+
+    .cb__tab{
+      background: darken($color-white,5%);
+
+      &--current,
+      &:hover{
+        background: $color-white;
+      }
+    }
+
+    .cb__nav{
+      background: $color-white;
+      border-color: $color-outside_alt;
+    }
+
+    .cb__close:before, .cb__minify:before,
+    .cb__fullscreen:before{
+      border-color: $color-outside;
+      background: $color-outside_alt;
+    }
+
+    .cb__body{
+      color: $color-outside;
+    }
+
+    *::selection {
+    	background: $color-outside !important;
+    	color: #fff !important;
+    }
+
+    *::-moz-selection {
+    	background: $color-outside !important;
+    	color: #fff !important;
+    }
+
+    *::-webkit-selection {
+    	background: $color-outside !important;
+    	color: #fff !important;
+    }
+  }
+
+}
