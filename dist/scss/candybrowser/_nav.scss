@@ -41,8 +41,7 @@
 
   .cb__back:before{
     content: '\2192';
-    transform: rotate(180deg);
-    transform-origin: center 52%;
+    transform: rotate(180deg) translateY(-9%);
   }
 
   .cb__forward:before{
