@@ -28,7 +28,7 @@
     text-decoration: none;
     font-size: $cb-font-size;
     text-align: center;
-    color: lighten($cb-font-color, 20%);
+    color: $cb-font-color;
 
     &:before{
       display: inline-block;
@@ -56,5 +56,5 @@
   width: 100%;
   height: $cb-nav-height - 4px;
   font-size: 0.8em;
-  color: lighten($cb-font-color, 20%);
+  color: $cb-font-color;
 }

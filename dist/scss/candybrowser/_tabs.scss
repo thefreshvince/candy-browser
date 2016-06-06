@@ -19,7 +19,7 @@
     line-height: $cb-tab-height;
     font-size: $cb-font-size * 0.8;
     text-decoration: none;
-    color: lighten($cb-font-color, 20%);
+    color: $cb-font-color;
     background: $cb-tab-background-color;
     border: $cb-border-size solid $cb-border-color;
     border-top-left-radius: $cb-border-top-left-radius;
