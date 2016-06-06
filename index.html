@@ -5,6 +5,7 @@
   <title>Candybrowser</title>
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/css/prism.css">
   <link rel="stylesheet" href="assets/css/site.css">
   <link rel="stylesheet" href="assets/css/candybrowser.css">
 </head>
@@ -31,7 +32,7 @@
               <a href="#forward" class="cb__forward animated bounceInDown animated-delay-4"></a>
               <a href="#refresh" class="cb__refresh animated bounceInLeft animated-delay-6"></a>
             </div>
-            <input type="text" value="&#128196; http://something.com"  class="cb__address animated bounceInRight" readonly />
+            <input type="text" value="&#128196; http://yoursite.com"  class="cb__address animated bounceInRight" readonly />
           </div>
         </header>
         <div class="cb__body">
@@ -65,38 +66,59 @@
 
   <section>
 
+    <h2>Getting Started</h2>
+
+    <p>In the head of your html document:</p>
+
     <pre>
-      &lt;article class=&quot;cb__window&quot;&gt;
-        &lt;header class=&quot;cb__header&quot;&gt;
-          &lt;div class=&quot;cb__decorative-buttons&quot;&gt;
-            &lt;span class=&quot;cb__close&quot;&gt;&lt;/span&gt;
-            &lt;span class=&quot;cb__minify&quot;&gt;&lt;/span&gt;
-            &lt;span class=&quot;cb__fullscreen&quot;&gt;&lt;/span&gt;
-          &lt;/div&gt;
-          &lt;nav class=&quot;cb__tabs&quot;&gt;
-            &lt;a href=&quot;#tab1&quot; class=&quot;cb__tab&quot;&gt;Tab 1&lt;/a&gt;
-            &lt;a href=&quot;#tab2&quot; class=&quot;cb__tab&quot;&gt;Tab 2&lt;/a&gt;
-            &lt;a href=&quot;#tab3&quot; class=&quot;cb__tab&quot;&gt;Tab 3&lt;/a&gt;
-          &lt;/nav&gt;
-          &lt;div class=&quot;cb__nav&quot;&gt;
-            &lt;div class=&quot;cb__buttons&quot;&gt;
-              &lt;a href=&quot;#back&quot; class=&quot;cb__back&quot;&gt;&lt;/a&gt;
-              &lt;a href=&quot;#forward&quot; class=&quot;cb__forward&quot;&gt;&lt;/a&gt;
-              &lt;a href=&quot;#refresh&quot; class=&quot;cb__refresh&quot;&gt;&lt;/a&gt;
-            &lt;/div&gt;
-            &lt;input type=&quot;text&quot; value=&quot;&amp;#128196; http://something.com&quot;  class=&quot;cb__address&quot; readonly /&gt;
-          &lt;/div&gt;
-        &lt;/header&gt;
-        &lt;div class=&quot;cb__body&quot;&gt;
-          &lt;div class=&quot;cb__content&quot;&gt;
-            &lt;h1&gt;YOUR AWESOME CONTENT&lt;/h1&gt;
-          &lt;/div&gt;
+<code class="language-html">
+  &lt;head&gt;
+    ...
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;path/to/candybrowser.css&quot;&gt;
+  &lt;/head&gt;</code>
+    </pre>
+
+    <p>Somewhere within the body:</p>
+
+    <pre>
+      <code class="language-html">
+  &lt;article class=&quot;cb__window&quot;&gt;
+    &lt;header class=&quot;cb__header&quot;&gt;
+      &lt;div class=&quot;cb__decorative-buttons&quot;&gt;
+        &lt;span class=&quot;cb__close&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;cb__minify&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;cb__fullscreen&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;nav class=&quot;cb__tabs&quot;&gt;
+        &lt;a href=&quot;#tab1&quot; class=&quot;cb__tab&quot;&gt;Tab 1&lt;/a&gt;
+        &lt;a href=&quot;#tab2&quot; class=&quot;cb__tab&quot;&gt;Tab 2&lt;/a&gt;
+        &lt;a href=&quot;#tab3&quot; class=&quot;cb__tab&quot;&gt;Tab 3&lt;/a&gt;
+      &lt;/nav&gt;
+      &lt;div class=&quot;cb__nav&quot;&gt;
+        &lt;div class=&quot;cb__buttons&quot;&gt;
+          &lt;a href=&quot;#back&quot; class=&quot;cb__back&quot;&gt;&lt;/a&gt;
+          &lt;a href=&quot;#forward&quot; class=&quot;cb__forward&quot;&gt;&lt;/a&gt;
+          &lt;a href=&quot;#refresh&quot; class=&quot;cb__refresh&quot;&gt;&lt;/a&gt;
         &lt;/div&gt;
-        &lt;footer class=&quot;cb__footer&quot;&gt;
-        &lt;/footer&gt;
-      &lt;/article&gt;
+        &lt;input type=&quot;text&quot;
+               value=&quot;&amp;#128196; http://yoursite.com&quot;
+               class=&quot;cb__address&quot;
+               readonly /&gt;
+      &lt;/div&gt;
+    &lt;/header&gt;
+    &lt;div class=&quot;cb__body&quot;&gt;
+      &lt;div class=&quot;cb__content&quot;&gt;
+        &lt;h1&gt;YOUR AWESOME CONTENT&lt;/h1&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;footer class=&quot;cb__footer&quot;&gt;
+    &lt;/footer&gt;
+  &lt;/article&gt;</code>
     </pre>
 
   </section>
+
+  <script src="assets/js/prism.js"></script>
+
 </body>
 </html>

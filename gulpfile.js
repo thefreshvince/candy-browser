@@ -16,16 +16,13 @@ gulp.task('sass', function(){
       '!**/site/*'
     ], {restore: true}),
     f_css = filter([
-      '**/*.css',
-      '!**/site.css',
-      '!**/site/*',
-      '!**/normalize.css',
-      '!**/animate.css'
+      '**/candybrowser.css'
     ], {restore: true});
 
   return gulp.src([
       './node_modules/normalizecss/normalize.css',
       './node_modules/animate.css/animate.css',
+      './source/css/prism.css',
       './source/sass/**/*.scss'
     ])
     .pipe(plumber())
@@ -44,7 +41,14 @@ gulp.task('sass', function(){
 
 });
 
-gulp.task('js', function(){});
+gulp.task('js', function(){
+
+  return gulp.src([
+      './source/js/prism.js'
+    ])
+    .pipe(gulp.dest('./assets/js/'));
+
+});
 
 gulp.task('webserver', function() {
   gulp.src('./')
@@ -60,4 +64,4 @@ gulp.task('watch', function(){
   gulp.watch('./source/sass/**/*.scss', ['sass']);
 });
 
-gulp.task('default', ['sass', 'webserver', 'watch'])
+gulp.task('default', ['sass', 'js', 'webserver', 'watch'])
