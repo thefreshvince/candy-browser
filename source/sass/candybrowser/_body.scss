@@ -3,6 +3,8 @@
   overflow: hidden;
   z-index: 1;
   background: #fff;
+  border-bottom-left-radius: $cb-border-bottom-left-radius;
+  border-bottom-right-radius: $cb-border-bottom-right-radius;
 
   &:before{
     content: '';
