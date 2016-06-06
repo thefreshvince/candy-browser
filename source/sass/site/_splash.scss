@@ -20,18 +20,16 @@
   animation: hover 5s infinite ease-in-out;
 }
 
-  .cb__window.cb__window--blue{
+.cb__window--disco{
+  animation-name: Disco;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
 
-    .cb__tab,
-    .cb__nav,
-    .cb__address,
-    .cb__back, .cb__forward, .cb__refresh{
-      color: lighten(#00f, 20%);
-    }
-
-    .cb__close:before, .cb__minify:before,
-    .cb__fullscreen:before{
-      border-color: lighten(#00f, 15%);
-      background: lighten(#00f, 20%);
-    }
-  }
+.cb__window--rave{
+  animation-name: Rave;
+  animation-duration: 0.25s !important;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
