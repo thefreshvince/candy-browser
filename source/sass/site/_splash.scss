@@ -1,4 +1,5 @@
 .splash{
+  perspective: 2000px;
   display: flex;
   overflow: hidden;
   height: 100%;
@@ -7,8 +8,30 @@
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(45deg,lighten(#f00, 20%),lighten(#00f, 20%));
 
   .tada{
     max-width: 100%;
   }
 }
+
+.cb__hover{
+  max-width: 100%;
+  animation: hover 5s infinite ease-in-out;
+}
+
+  .cb__window.cb__window--blue{
+
+    .cb__tab,
+    .cb__nav,
+    .cb__address,
+    .cb__back, .cb__forward, .cb__refresh{
+      color: lighten(#00f, 20%);
+    }
+
+    .cb__close:before, .cb__minify:before,
+    .cb__fullscreen:before{
+      border-color: lighten(#00f, 15%);
+      background: lighten(#00f, 20%);
+    }
+  }
