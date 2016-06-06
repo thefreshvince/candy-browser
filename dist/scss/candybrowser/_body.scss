@@ -3,4 +3,23 @@
   overflow: hidden;
   z-index: 1;
   background: #fff;
+
+  &:before{
+    content: '';
+    position: relative;
+    display: block;
+    padding-bottom: 66%;
+    width: 100%;
+  }
 }
+
+  .cb__content{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
