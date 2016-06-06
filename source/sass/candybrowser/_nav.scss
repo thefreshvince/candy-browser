@@ -3,7 +3,7 @@
   z-index: 10;
   box-sizing: border-box;
   padding-left: 100px;
-  padding-right: 1px;
+  padding-right: 2px;
   height: $cb-nav-height;
   background: $cb-background-color;
 }
@@ -52,10 +52,16 @@
 
 .cb__address{
   box-sizing: border-box;
+  -webkit-appearance: none;
   margin-top: 2px;
   padding: 0px 5px;
   width: 100%;
   height: $cb-nav-height - 4px;
   font-size: 0.8em;
+  border: none;
   color: $cb-font-color;
+  border-top-left-radius: min($cb-border-top-left-radius,2px);
+  border-top-right-radius: min($cb-border-top-right-radius,2px);
+  border-bottom-left-radius: min($cb-border-bottom-left-radius,2px);
+  border-bottom-right-radius: min($cb-border-bottom-right-radius,2px);
 }
