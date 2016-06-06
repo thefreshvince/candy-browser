@@ -1,0 +1,12 @@
+.cb__window{
+  display: block;
+  position: relative;
+  width: $cb-window-width;
+  max-width: $cb-window-max-width;
+  background: $cb-background-color;
+  border: $cb-border-size solid $cb-border-color;
+  border-top-left-radius: $cb-border-top-left-radius;
+  border-top-right-radius: $cb-border-top-right-radius;
+  border-bottom-left-radius: $cb-border-bottom-left-radius;
+  border-bottom-right-radius: $cb-border-bottom-right-radius;
+}
