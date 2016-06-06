@@ -101,8 +101,8 @@
 .cb__tab {
   position: relative;
   display: inline-block;
-  -webkit-transition: background 0.4s;
-  transition: background 0.4s;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
   box-sizing: border-box;
   text-align: center;
   min-width: 10%;
@@ -113,6 +113,7 @@
   font-size: 12px;
   text-decoration: none;
   color: #333333;
+  opacity: 0.8;
   background: #ddd;
   border: 1px solid #bcbcbc;
   border-top-left-radius: 5px;
@@ -121,17 +122,17 @@
   border-bottom-right-radius: 0;
   border-bottom: none; }
   .cb__tab:hover {
-    background: #e3e3e3; }
+    opacity: 1; }
   .cb__tab--current, .cb__tab--current:hover {
     z-index: 1;
-    background: #ddd; }
+    opacity: 1; }
 
 .cb__nav {
   position: relative;
   z-index: 10;
   box-sizing: border-box;
   padding-left: 100px;
-  padding-right: 1px;
+  padding-right: 2px;
   height: 30px;
   background: #ddd; }
 
@@ -175,12 +176,18 @@
 
 .cb__address {
   box-sizing: border-box;
+  -webkit-appearance: none;
   margin-top: 2px;
   padding: 0px 5px;
   width: 100%;
   height: 26px;
   font-size: 0.8em;
-  color: #333333; }
+  border: none;
+  color: #333333;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px; }
 
 .cb__header {
   position: relative;
