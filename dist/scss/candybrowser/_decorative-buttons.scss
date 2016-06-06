@@ -1,5 +1,6 @@
 .cb__decorative-buttons{
   position: absolute;
+  z-index: 1;
   box-sizing: border-box;
   padding: 0px 0.5%;
   width: 60px;
@@ -25,20 +26,45 @@
     border-radius: 50%;
     border: 1px solid #aaa;
     background: #ccc;
+    transition: all $cb-transition-length;
   }
 }
 
-  .cb__close:before{
-    border: 1px solid $cb-danger-border-color;
-    background: $cb-danger-color;
+  .cb__close{
+
+    &:before{
+      border: 1px solid $cb-danger-border-color;
+      background: $cb-danger-color;
+    }
+
+    &:hover::before{
+      border-color: lighten($cb-danger-border-color,10%);
+      background: lighten($cb-danger-color,10%);
+    }
   }
 
-  .cb__minify:before{
-    border: 1px solid $cb-warning-border-color;
-    background: $cb-warning-color;
+  .cb__minify{
+
+    &:before{
+      border: 1px solid $cb-warning-border-color;
+      background: $cb-warning-color;
+    }
+
+    &:hover::before{
+      border-color: lighten($cb-warning-border-color,10%);
+      background: lighten($cb-warning-color,10%);
+    }
   }
 
-  .cb__fullscreen:before{
-    border: 1px solid $cb-success-border-color;
-    background: $cb-success-color;
+  .cb__fullscreen{
+
+    &:before{
+      border: 1px solid $cb-success-border-color;
+      background: $cb-success-color;
+    }
+
+    &:hover::before{
+      border-color: lighten($cb-success-border-color,10%);
+      background: lighten($cb-success-color,10%);
+    }
   }
