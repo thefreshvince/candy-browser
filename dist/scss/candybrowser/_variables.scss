@@ -2,17 +2,45 @@
  *  General
  */
 
-$background-color: #f00;
-$items-color: #fff;
-$font-color: #000;
+$cb-font-size: 16px;
+
+$cb-transition-length: 0.4s;
+
+$cb-background-color: #ddd;
+$cb-items-color: #fff;
+$cb-font-color: #000;
+
+$cb-danger-color: #d9534f;
+$cb-danger-border-color: #d43f3a;
+
+$cb-warning-color: #f0ad4e;
+$cb-warning-border-color: #eea236;
+
+$cb-success-color: #5cb85c;
+$cb-success-border-color: #4cae4c;
 
 /*
  *  Border
  */
 
-$border-color: $background-color;
-$border-size: 1px;
-$border-top-left-radius: 5px;
-$border-top-right-radius: 5px;
-$border-bottom-left-radius: 5px;
-$border-bottom-right-radius: 5px;
+$cb-border-color: $cb-background-color;
+$cb-border-size: 1px;
+$cb-border-top-left-radius: 5px;
+$cb-border-top-right-radius: 5px;
+$cb-border-bottom-left-radius: 5px;
+$cb-border-bottom-right-radius: 5px;
+
+/*
+ *  Window
+ */
+
+$cb-window-width: 800px;
+$cb-window-max-width: 100%;
+
+/*
+ *  Tabs
+ */
+
+$cb-tabs-height: 30px;
+$cb-tab-height: $cb-tabs-height * 0.85;
+$cb-tab-background-color: #aaa;
