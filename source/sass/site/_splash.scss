@@ -2,6 +2,8 @@
   display: flex;
   height: 100%;
   width: 100%;
+  padding: $gutter-width;
+  box-sizing: border-box;
   justify-content: center;
   align-items: center;
 }
