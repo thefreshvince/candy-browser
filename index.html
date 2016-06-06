@@ -16,7 +16,7 @@
       <div class="cb__hover">
         <div class="animated tada animated-delay-20">
 
-          <article class="cb__window animated bounceIn">
+          <article id="splash__window" class="cb__window cb__window--default animated bounceIn">
             <header class="cb__header">
               <div class="cb__decorative-buttons">
                 <span class="cb__close animated bounceInDown animated-delay-1"></span>
@@ -24,9 +24,13 @@
                 <span class="cb__fullscreen animated bounceInDown animated-delay-5"></span>
               </div>
               <nav class="cb__tabs">
-                <a href="#tab1" class="cb__tab cb__tab--current animated bounceInDown animated-delay-7">Tab 1</a>
-                <a href="#tab2" class="cb__tab animated bounceInDown animated-delay-8">Tab 2</a>
-                <a href="#tab3" class="cb__tab animated bounceInDown animated-delay-9">Tab 3</a>
+                <a href="#tab1" data-theme="default" class="cb__tab cb__tab--current animated bounceInDown animated-delay-7">Default Theme</a>
+                <a href="#tab2" data-theme="orange" class="cb__tab animated bounceInDown animated-delay-8">Orange</a>
+                <a href="#tab2" data-theme="purple" class="cb__tab animated bounceInDown animated-delay-9">Purple</a>
+                <a href="#tab3" data-theme="blue" class="cb__tab animated bounceInDown animated-delay-10">Blue</a>
+                <a href="#tab3" data-theme="green" class="cb__tab animated bounceInDown animated-delay-11">Green</a>
+                <a href="#tab3" data-theme="disco" class="cb__tab animated bounceInDown animated-delay-12">Disco</a>
+                <a href="#tab3" data-theme="rave" class="cb__tab animated bounceInDown animated-delay-12">Rave</a>
               </nav>
               <div class="cb__nav">
                 <div class="cb__buttons">
@@ -173,6 +177,43 @@
         requestAnimationFrame(updateElem);
 
       });
+
+    })();
+
+    (function(){
+
+      var cbWin = document.getElementById('splash__window'),
+          tabs = cbWin.getElementsByClassName('cb__tab'),
+          swapTheme = function(theme){
+            var theme = this.getAttribute('data-theme'),
+                cbWinClasses;
+
+            cbWin.getElementsByClassName('cb__tab--current')[0]
+              .classList.remove('cb__tab--current');
+
+            this.classList.add('cb__tab--current');
+
+            switch(theme){
+              case 'disco':
+                theme = 'green cb__window--disco';
+                cbWin.classList.remove('cb__window--rave');
+                break;
+              case 'rave':
+                theme = 'default cb__window--rave';
+                cbWin.classList.remove('cb__window--disco');
+                break;
+              default:
+                cbWin.classList.remove('cb__window--rave');
+                cbWin.classList.remove('cb__window--disco');
+            }
+
+            cbWinClasses = cbWin.getAttribute('class')
+            cbWin.setAttribute('class', cbWinClasses.replace(/cb\_\_window\-\-[a-z,A-Z,0-9]*/,'cb__window--'+theme+' '))
+          };
+
+      for (var i = 0, l = tabs.length; i < l; i++) {
+        tabs[i].addEventListener('click', swapTheme);
+      }
 
     })();
 
