@@ -1,0 +1,5 @@
+@for $i from 1 through 40 {
+  .animated-delay-#{$i} {
+    animation-delay: #{$i/8}s;
+  }
+}
