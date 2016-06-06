@@ -160,7 +160,9 @@
   text-decoration: none;
   font-size: 15px;
   text-align: center;
-  color: #333333; }
+  color: #333333;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden; }
   .cb__back:before,
   .cb__forward:before,
   .cb__refresh:before {
@@ -168,7 +170,11 @@
     vertical-align: middle; }
 
 .cb__back:before {
-  content: '\2190'; }
+  content: '\2192';
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transform-origin: center 52%;
+          transform-origin: center 52%; }
 
 .cb__forward:before {
   content: '\2192'; }
