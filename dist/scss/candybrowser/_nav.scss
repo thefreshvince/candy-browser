@@ -1,10 +1,11 @@
 .cb__nav{
   position: relative;
+  z-index: 10;
   box-sizing: border-box;
   padding-left: 100px;
   padding-right: 1px;
   height: $cb-nav-height;
-  box-shadow: 0px -2px 2px -1px rgba(0,0,0,0.2);
+  background: $cb-background-color;
 }
 
 .cb__buttons{
