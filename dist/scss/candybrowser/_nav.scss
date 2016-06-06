@@ -3,9 +3,10 @@
   z-index: 10;
   box-sizing: border-box;
   padding-left: 100px;
-  padding-right: 2px;
-  height: $cb-nav-height;
+  padding-right: 3px;
+  height: $cb-nav-height+1;
   background: $cb-background-color;
+  border-bottom: $cb-border-size solid darken($cb-border-color, 10%);
 }
 
 .cb__buttons{
@@ -53,12 +54,12 @@
 .cb__address{
   box-sizing: border-box;
   -webkit-appearance: none;
-  margin-top: 2px;
+  margin-top: 5px;
   padding: 0px 5px;
   width: 100%;
-  height: $cb-nav-height - 4px;
+  height: $cb-nav-height - 9px;
   font-size: 0.8em;
-  border: none;
+  border: $cb-border-size solid darken($cb-border-color, 10%);
   color: $cb-font-color;
   border-top-left-radius: min($cb-border-top-left-radius,2px);
   border-top-right-radius: min($cb-border-top-right-radius,2px);
