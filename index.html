@@ -11,58 +11,60 @@
   <link rel="stylesheet" href="assets/css/candybrowser.css">
 </head>
 <body>
-  <section class="splash">
+  <section id="splash" class="splash">
+    <div id="cb__exploded" class="cb__exploded">
+      <div class="cb__hover">
+        <div class="animated tada animated-delay-20">
 
-    <div class="animated tada animated-delay-20">
+          <article class="cb__window animated bounceIn">
+            <header class="cb__header">
+              <div class="cb__decorative-buttons">
+                <span class="cb__close animated bounceInDown animated-delay-1"></span>
+                <span class="cb__minify animated bounceInDown animated-delay-3"></span>
+                <span class="cb__fullscreen animated bounceInDown animated-delay-5"></span>
+              </div>
+              <nav class="cb__tabs">
+                <a href="#tab1" class="cb__tab cb__tab--current animated bounceInDown animated-delay-7">Tab 1</a>
+                <a href="#tab2" class="cb__tab animated bounceInDown animated-delay-8">Tab 2</a>
+                <a href="#tab3" class="cb__tab animated bounceInDown animated-delay-9">Tab 3</a>
+              </nav>
+              <div class="cb__nav">
+                <div class="cb__buttons">
+                  <a href="#back" class="cb__back animated bounceInRight animated-delay-1"></a>
+                  <a href="#forward" class="cb__forward animated bounceInDown animated-delay-4"></a>
+                  <a href="#refresh" class="cb__refresh animated bounceInLeft animated-delay-6"></a>
+                </div>
+                <input type="text" value="&#128196; http://yoursite.com"  class="cb__address animated bounceInRight" readonly />
+              </div>
+            </header>
+            <div class="cb__body">
 
-      <article class="cb__window animated bounceIn">
-        <header class="cb__header">
-          <div class="cb__decorative-buttons">
-            <span class="cb__close animated bounceInDown animated-delay-1"></span>
-            <span class="cb__minify animated bounceInDown animated-delay-3"></span>
-            <span class="cb__fullscreen animated bounceInDown animated-delay-5"></span>
-          </div>
-          <nav class="cb__tabs">
-            <a href="#tab1" class="cb__tab cb__tab--current animated bounceInDown animated-delay-7">Tab 1</a>
-            <a href="#tab2" class="cb__tab animated bounceInDown animated-delay-8">Tab 2</a>
-            <a href="#tab3" class="cb__tab animated bounceInDown animated-delay-9">Tab 3</a>
-          </nav>
-          <div class="cb__nav">
-            <div class="cb__buttons">
-              <a href="#back" class="cb__back animated bounceInRight animated-delay-1"></a>
-              <a href="#forward" class="cb__forward animated bounceInDown animated-delay-4"></a>
-              <a href="#refresh" class="cb__refresh animated bounceInLeft animated-delay-6"></a>
+              <div class="cb__content animated bounceInDown animated-delay-10">
+
+                <div class="somecontent">
+
+                  <h1>Candybrowser</h1>
+
+                  <p>A fully HTML5/CSS3 frame that is the most delicious way to show content that needs browserception.</p>
+
+                  <a href="#why">...But Why?</a>
+
+                  <a href="#download" class="button">Download</a>
+
+                  <a href="#documentation" class="button">Docs</a>
+
+                </div>
+
+              </div>
+
             </div>
-            <input type="text" value="&#128196; http://yoursite.com"  class="cb__address animated bounceInRight" readonly />
-          </div>
-        </header>
-        <div class="cb__body">
-
-          <div class="cb__content animated bounceInDown animated-delay-10">
-
-            <div class="somecontent">
-
-              <h1>Candybrowser</h1>
-
-              <p>A fully HTML5/CSS3 frame that is the most delicious way to show content that needs browserception.</p>
-
-              <a href="#why">...But Why?</a>
-
-              <a href="#download" class="button">Download</a>
-
-              <a href="#documentation" class="button">Docs</a>
-
-            </div>
-
-          </div>
+            <footer class="cb__footer">
+            </footer>
+          </article>
 
         </div>
-        <footer class="cb__footer">
-        </footer>
-      </article>
-
+      </div>
     </div>
-
   </section>
 
   <section>
@@ -140,11 +142,41 @@
       <li>Themeable</li>
       <li>Easily import with Sass</li>
       <li>Or just reference the css file</li>
+      <li>Free to use!</li>
     </ul>
 
   </section>
 
   <script src="assets/js/prism.js"></script>
+
+  <script>
+
+    (function(){
+
+      var splash = document.getElementById('splash'),
+          exploded = document.getElementById('cb__exploded'),
+          winWidth = window.innerWidth,
+          winHeight = window.innerHeight,
+          thresh = 30,
+          threshStart = -(thresh/2),
+          rotY = '',
+          rotX = '',
+          updateElem = function(){
+            exploded.style.transform = rotX+rotY;
+          };
+
+      splash.addEventListener('mousemove', function(e){
+
+        rotX = 'rotateY('+(e.clientX/winWidth * thresh + threshStart)+'deg) ';
+        rotY = 'rotateX('+-(e.clientY/winHeight * thresh + threshStart)+'deg)';
+
+        requestAnimationFrame(updateElem);
+
+      });
+
+    })();
+
+  </script>
 
 </body>
 </html>
