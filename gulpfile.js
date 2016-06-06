@@ -5,7 +5,8 @@ const gulp = require('gulp'),
   cssmin = require('gulp-cssmin'),
   autoprefixer = require('gulp-autoprefixer'),
   plumber = require('gulp-plumber'),
-  notify = require('gulp-notify');
+  notify = require('gulp-notify'),
+  rename = require('gulp-rename');
 
 gulp.task('sass', function(){
 
@@ -33,10 +34,12 @@ gulp.task('sass', function(){
     .pipe(f_scss.restore)
     .pipe(sass())
     .pipe(autoprefixer())
-    .pipe(cssmin())
     .pipe(gulp.dest('./assets/css/'))
     .pipe(notify('Sass compiled'))
     .pipe(f_css)
+    .pipe(gulp.dest('./dist/'))
+    .pipe(cssmin())
+    .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('./dist/'));
 
 });
