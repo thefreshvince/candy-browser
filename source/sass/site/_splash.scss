@@ -10,14 +10,52 @@
   align-items: center;
   background: linear-gradient(45deg,lighten(#f00, 20%),lighten(#00f, 20%));
 
+  .cb__content{
+    text-align: center;
+
+    h1{
+      margin: 0 0 20px;
+      font-size: 0;
+
+      span{
+        display: inline-block;
+        font-size: 60px;
+      }
+
+      @for $i from 1 through 12{
+        .h--#{$i}{
+          color: adjust-hue(#9966CC, (22.5 * $i - 1));
+        }
+      }
+    }
+
+    p{
+      line-height: 1.2em;
+      color: #9966CC;
+      display: inline-block;
+      max-width: 400px;
+    }
+  }
+
   .tada{
+    transform-style: preserve-3d;
     max-width: 100%;
   }
 }
 
 .cb__hover{
   max-width: 100%;
+  transform-style: preserve-3d;
   animation: hover 5s infinite ease-in-out;
+}
+
+.cb__window--default{
+  p{
+    line-height: 1.2em;
+    color: adjust-hue(#9966CC, 22.5);
+    display: inline-block;
+    max-width: 400px;
+  }
 }
 
 .cb__window--disco{
@@ -32,4 +70,66 @@
   animation-duration: 0.25s !important;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+}
+
+.cb__window--explode{
+  transform-style: preserve-3d;
+
+  .cb__header{
+    transform-style: preserve-3d;
+    transform: translateZ(50px) translateY(20px);
+    transition: transform $transition-length;
+  }
+
+  .cb__body{
+    transform-origin: 0 0;
+    transform: translateZ(1px) rotateX(10deg);
+    transition: transform $transition-length;
+  }
+
+  .cb__decorative-buttons{
+    transform: translateZ(10px);
+  }
+
+  .cb__tabs{
+    perspective: 2000px;
+    transform-style: preserve-3d;
+    transform: translateZ(9.9px);
+    transition: transform $transition-length;
+
+    &:before{
+      transform: translateZ(-0.1px);
+    }
+
+    .cb__tab{
+      transform-style: preserve-3d;
+      transform: translateZ(-20px);
+      animation-fill-mode: backwards;
+
+      &--current{
+        transform: translateZ(0px);
+      }
+    }
+  }
+
+  .cb__buttons{
+    perspective: 2000px;
+    transform-style: preserve-3d;
+    transform: translateZ(20px) translateY(10px) translateX(10px);
+    transition: transform $transition-length;
+  }
+
+  .cb__nav{
+    perspective: 2000px;
+    transform-style: preserve-3d;
+    transform: translateZ(10px);
+    transition: transform $transition-length;
+
+    .cb__addresscontainer{
+      transform-style: preserve-3d;
+      animation-fill-mode: backwards;
+      transform: translateZ(20px) translateY(10px) translateX(10px);
+      transition: transform $transition-length;
+    }
+  }
 }

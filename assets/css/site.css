@@ -1,6 +1,7 @@
 body, html {
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  font-family: 'Source Code Pro', sans-serif; }
 
 h1, h2, h3,
 h4, h5, h6 {
@@ -25,13 +26,60 @@ h4, h5, h6 {
           align-items: center;
   background: -webkit-linear-gradient(45deg, #ff6666, #6666ff);
   background: linear-gradient(45deg, #ff6666, #6666ff); }
+  .splash .cb__content {
+    text-align: center; }
+    .splash .cb__content h1 {
+      margin: 0 0 20px;
+      font-size: 0; }
+      .splash .cb__content h1 span {
+        display: inline-block;
+        font-size: 60px; }
+      .splash .cb__content h1 .h--1 {
+        color: #be66cc; }
+      .splash .cb__content h1 .h--2 {
+        color: #cc66b4; }
+      .splash .cb__content h1 .h--3 {
+        color: #cc668e; }
+      .splash .cb__content h1 .h--4 {
+        color: #cc6668; }
+      .splash .cb__content h1 .h--5 {
+        color: #cc8b66; }
+      .splash .cb__content h1 .h--6 {
+        color: #ccb166; }
+      .splash .cb__content h1 .h--7 {
+        color: #c1cc66; }
+      .splash .cb__content h1 .h--8 {
+        color: #9bcc66; }
+      .splash .cb__content h1 .h--9 {
+        color: #74cc66; }
+      .splash .cb__content h1 .h--10 {
+        color: #66cc7e; }
+      .splash .cb__content h1 .h--11 {
+        color: #66cca4; }
+      .splash .cb__content h1 .h--12 {
+        color: #66ccca; }
+    .splash .cb__content p {
+      line-height: 1.2em;
+      color: #9966CC;
+      display: inline-block;
+      max-width: 400px; }
   .splash .tada {
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
     max-width: 100%; }
 
 .cb__hover {
   max-width: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   -webkit-animation: hover 5s infinite ease-in-out;
           animation: hover 5s infinite ease-in-out; }
+
+.cb__window--default p {
+  line-height: 1.2em;
+  color: #bf66cc;
+  display: inline-block;
+  max-width: 400px; }
 
 .cb__window--disco {
   -webkit-animation-name: Disco;
@@ -52,6 +100,88 @@ h4, h5, h6 {
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear; }
+
+.cb__window--explode {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d; }
+  .cb__window--explode .cb__header {
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform: translateZ(50px) translateY(20px);
+            transform: translateZ(50px) translateY(20px);
+    -webkit-transition: -webkit-transform 0.25s;
+    transition: -webkit-transform 0.25s;
+    transition: transform 0.25s;
+    transition: transform 0.25s, -webkit-transform 0.25s; }
+  .cb__window--explode .cb__body {
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: translateZ(1px) rotateX(10deg);
+            transform: translateZ(1px) rotateX(10deg);
+    -webkit-transition: -webkit-transform 0.25s;
+    transition: -webkit-transform 0.25s;
+    transition: transform 0.25s;
+    transition: transform 0.25s, -webkit-transform 0.25s; }
+  .cb__window--explode .cb__decorative-buttons {
+    -webkit-transform: translateZ(10px);
+            transform: translateZ(10px); }
+  .cb__window--explode .cb__tabs {
+    -webkit-perspective: 2000px;
+            perspective: 2000px;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform: translateZ(9.9px);
+            transform: translateZ(9.9px);
+    -webkit-transition: -webkit-transform 0.25s;
+    transition: -webkit-transform 0.25s;
+    transition: transform 0.25s;
+    transition: transform 0.25s, -webkit-transform 0.25s; }
+    .cb__window--explode .cb__tabs:before {
+      -webkit-transform: translateZ(-0.1px);
+              transform: translateZ(-0.1px); }
+    .cb__window--explode .cb__tabs .cb__tab {
+      -webkit-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+      -webkit-transform: translateZ(-20px);
+              transform: translateZ(-20px);
+      -webkit-animation-fill-mode: backwards;
+              animation-fill-mode: backwards; }
+      .cb__window--explode .cb__tabs .cb__tab--current {
+        -webkit-transform: translateZ(0px);
+                transform: translateZ(0px); }
+  .cb__window--explode .cb__buttons {
+    -webkit-perspective: 2000px;
+            perspective: 2000px;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform: translateZ(20px) translateY(10px) translateX(10px);
+            transform: translateZ(20px) translateY(10px) translateX(10px);
+    -webkit-transition: -webkit-transform 0.25s;
+    transition: -webkit-transform 0.25s;
+    transition: transform 0.25s;
+    transition: transform 0.25s, -webkit-transform 0.25s; }
+  .cb__window--explode .cb__nav {
+    -webkit-perspective: 2000px;
+            perspective: 2000px;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform: translateZ(10px);
+            transform: translateZ(10px);
+    -webkit-transition: -webkit-transform 0.25s;
+    transition: -webkit-transform 0.25s;
+    transition: transform 0.25s;
+    transition: transform 0.25s, -webkit-transform 0.25s; }
+    .cb__window--explode .cb__nav .cb__addresscontainer {
+      -webkit-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+      -webkit-animation-fill-mode: backwards;
+              animation-fill-mode: backwards;
+      -webkit-transform: translateZ(20px) translateY(10px) translateX(10px);
+              transform: translateZ(20px) translateY(10px) translateX(10px);
+      -webkit-transition: -webkit-transform 0.25s;
+      transition: -webkit-transform 0.25s;
+      transition: transform 0.25s;
+      transition: transform 0.25s, -webkit-transform 0.25s; }
 
 .animated-delay-1 {
   -webkit-animation-delay: 0.125s;
@@ -275,5 +405,7 @@ h4, h5, h6 {
 
 .cb__exploded {
   max-width: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   -webkit-perspective: 2000px;
           perspective: 2000px; }
