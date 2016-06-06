@@ -22,7 +22,7 @@
   .cb__tab{
     position: relative;
     display: inline-block;
-    transition: opacity $cb-transition-length;
+    transition: background $cb-transition-length;
     box-sizing: border-box;
     text-align: center;
 
@@ -36,7 +36,6 @@
     font-size: $cb-font-size * 0.8;
     text-decoration: none;
     color: $cb-font-color;
-    opacity: 0.8;
     background: $cb-background-color;
     border: $cb-border-size solid darken($cb-border-color, 10%);
     border-top-left-radius: $cb-border-top-left-radius;
@@ -47,11 +46,12 @@
 
     &:hover{
       opacity: 1;
+      background: lighten($cb-background-color,10%);
     }
 
     &--current,
     &--current:hover{
       z-index: 1;
-      opacity: 1;
+      background: $cb-background-color;
     }
   }
