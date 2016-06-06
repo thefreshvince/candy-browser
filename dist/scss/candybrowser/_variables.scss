@@ -1,4 +1,15 @@
 /*
+ *  Themes
+ */
+
+$cb-themes: (
+  green: #6D8925,
+  blue: #4890C0,
+  orange: #FA6900,
+  purple: #9966CC
+);
+
+/*
  *  General
  */
 
@@ -41,7 +52,7 @@ $cb-window-max-width: 100%;
  *  Tabs
  */
 
-$cb-tabs-height: 30px;
+$cb-tabs-height: 35px;
 $cb-tab-height: $cb-tabs-height * 0.85;
 $cb-tab-background-color: #aaa;
 
@@ -49,5 +60,5 @@ $cb-tab-background-color: #aaa;
  *  nav
  */
 
-$cb-nav-height: 30px;
+$cb-nav-height: 41px;
 $cb-nav-color: darken($cb-tab-background-color, 40%);
