@@ -2,6 +2,7 @@
  *  Themes
  */
 
+$cb-theme-color-light: #fff;
 $cb-themes: (
   green: #6D8925,
   blue: #4890C0,
@@ -14,19 +15,20 @@ $cb-themes: (
  */
 
 $cb-font-size: 15px;
-
 $cb-transition-length: 0.4s;
 
 $cb-background-color: #ddd;
-$cb-items-color: #fff;
 $cb-font-color: lighten(#000, 20%);
 
+/*
+ *  Decorative Buttons
+ */
+
+$cb-decorative-buttons-width: 60px;
 $cb-danger-color: #d9534f;
 $cb-danger-border-color: #d43f3a;
-
 $cb-warning-color: #f0ad4e;
 $cb-warning-border-color: #eea236;
-
 $cb-success-color: #5cb85c;
 $cb-success-border-color: #4cae4c;
 
@@ -60,5 +62,19 @@ $cb-tab-background-color: #aaa;
  *  nav
  */
 
+$cb-nav-buttons-width: 100px;
 $cb-nav-height: 41px;
 $cb-nav-color: darken($cb-tab-background-color, 40%);
+
+$cb-nav-address-height: $cb-nav-height - 9px;
+
+$cb-nav-buttons-back: '\2039';
+$cb-nav-buttons-forward: '\203a';
+$cb-nav-buttons-refresh: '\21bb';
+
+/*
+ *  Body
+ */
+
+$cb-body-background: #fff;
+$cb-body-aspect: 1280 / 1920 * 100;

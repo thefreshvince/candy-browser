@@ -1,70 +1,13 @@
+@import './nav-buttons';
+@import './address-bar';
+
 .cb__nav{
   position: relative;
   z-index: 10;
   box-sizing: border-box;
-  padding-left: 100px;
-  padding-right: 3px;
+  padding-left: $cb-nav-buttons-width;
+  padding-right: ($cb-nav-height - $cb-nav-address-height)/2 - $cb-border-size;
   height: $cb-nav-height+1;
   background: $cb-background-color;
   border-bottom: $cb-border-size solid darken($cb-border-color, 10%);
-}
-
-.cb__buttons{
-  position: absolute;
-  box-sizing: border-box;
-  top: 0;
-  left: 0;
-  padding: 0 1%;
-  width: 100px;
-  height: $cb-nav-height;
-  font-size: 0;
-}
-
-  .cb__back,
-  .cb__forward,
-  .cb__refresh{
-    display: inline-block;
-    height: $cb-nav-height;
-    width: 33.3333%;
-    line-height: $cb-nav-height;
-    text-decoration: none;
-    font-size: $cb-font-size;
-    text-align: center;
-    color: $cb-font-color;
-    backface-visibility: hidden;
-
-    &:before{
-      display: inline-block;
-      vertical-align: middle;
-    }
-  }
-
-  .cb__back:before{
-    content: '\2192';
-    transform: rotate(180deg) translateY(-9%);
-  }
-
-  .cb__forward:before{
-    content: '\2192';
-  }
-
-  .cb__refresh:before{
-    content: '\21bb';
-    transform: rotate(90deg);
-  }
-
-.cb__address{
-  box-sizing: border-box;
-  -webkit-appearance: none;
-  margin-top: 5px;
-  padding: 0px 5px;
-  width: 100%;
-  height: $cb-nav-height - 9px;
-  font-size: 0.8em;
-  border: $cb-border-size solid darken($cb-border-color, 10%);
-  color: $cb-font-color;
-  border-top-left-radius: min($cb-border-top-left-radius,2px);
-  border-top-right-radius: min($cb-border-top-right-radius,2px);
-  border-bottom-left-radius: min($cb-border-bottom-left-radius,2px);
-  border-bottom-right-radius: min($cb-border-bottom-right-radius,2px);
 }

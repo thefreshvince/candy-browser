@@ -1,6 +1,7 @@
 .cb__window{
   display: block;
   position: relative;
+  box-sizing: border-box;
   width: $cb-window-width;
   max-width: $cb-window-max-width;
   background: $cb-background-color;

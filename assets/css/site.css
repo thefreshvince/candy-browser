@@ -5,7 +5,20 @@ body, html {
 
 h1, h2, h3,
 h4, h5, h6 {
+  font-weight: normal;
   font-family: 'Slackey', cursive; }
+
+h1 {
+  font-size: 4em; }
+
+h2 {
+  font-size: 3em; }
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto; }
 
 .splash {
   -webkit-perspective: 2000px;
@@ -24,8 +37,8 @@ h4, h5, h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: -webkit-linear-gradient(45deg, #ff6666, #6666ff);
-  background: linear-gradient(45deg, #ff6666, #6666ff); }
+  background: -webkit-linear-gradient(45deg, #be66cc, #CC668E);
+  background: linear-gradient(45deg, #be66cc, #CC668E); }
   .splash .cb__content {
     text-align: center;
     overflow: hidden; }
@@ -94,16 +107,6 @@ h4, h5, h6 {
           animation-name: Disco;
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear; }
-
-.cb__window--rave {
-  -webkit-animation-name: Rave;
-          animation-name: Rave;
-  -webkit-animation-duration: 0.25s !important;
-          animation-duration: 0.25s !important;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
@@ -389,28 +392,6 @@ h4, h5, h6 {
     -webkit-filter: hue-rotate(359deg);
             filter: hue-rotate(359deg); } }
 
-@-webkit-keyframes Rave {
-  0% {
-    -webkit-filter: brightness(1) invert(100%);
-            filter: brightness(1) invert(100%); }
-  50% {
-    -webkit-filter: brightness(4) invert(100%);
-            filter: brightness(4) invert(100%); }
-  100% {
-    -webkit-filter: hue-rotate(2) invert(100%);
-            filter: hue-rotate(2) invert(100%); } }
-
-@keyframes Rave {
-  0% {
-    -webkit-filter: brightness(1) invert(100%);
-            filter: brightness(1) invert(100%); }
-  50% {
-    -webkit-filter: brightness(4) invert(100%);
-            filter: brightness(4) invert(100%); }
-  100% {
-    -webkit-filter: hue-rotate(2) invert(100%);
-            filter: hue-rotate(2) invert(100%); } }
-
 .cb__exploded {
   max-width: 100%;
   -webkit-transform-style: preserve-3d;
@@ -519,3 +500,18 @@ pre[class*="language-"] {
 
 .token.entity {
   cursor: help; }
+
+.getting-started {
+  position: relative;
+  box-sizing: border-box;
+  padding: 100px 20px;
+  min-height: 100%;
+  background: #be66cc;
+  background: -webkit-linear-gradient(bottom, #be66cc, #CC668E);
+  background: linear-gradient(0deg, #be66cc, #CC668E); }
+  .getting-started h2 {
+    font-size: 1em;
+    color: inherit;
+    font-family: inherit;
+    margin: 0;
+    padding: 0; }
