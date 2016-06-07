@@ -76,7 +76,7 @@ The markup portion is relatively straight forward, just include the following so
 
 ###JS
 The corolation between a tab and it's content is made through the id/class of the content area and the tabs href. So href="#tab1" will show the element with id="tab1" or class="tab1".
-```javascript
+```html
 ...
   <!-- Right before the closing body tag -->
   <script src="path/to/candybrowser.css" charset="utf-8"></script>
@@ -90,7 +90,7 @@ Changing the theme of a window is just a matter of adding the class "cb__window-
 
 If you've included the js, you can switch between themes along with the tabs by specifying the "data-theme" attribute like this:
 
-<a href="#theme" data-theme="THEME" class="cb__tab">THEME</a>
+&lt;a href="#theme" data-theme="THEME" class="cb__tab"&gt;THEME&lt;/a&gt;
 
 Bundled themes include:
 -default
