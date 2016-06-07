@@ -90,7 +90,9 @@ Changing the theme of a window is just a matter of adding the class "cb__window-
 
 If you've included the js, you can switch between themes along with the tabs by specifying the "data-theme" attribute like this:
 
-&lt;a href="#theme" data-theme="THEME" class="cb__tab"&gt;THEME&lt;/a&gt;
+```html
+<a href="#theme" data-theme="THEME" class="cb__tab">THEME</a>
+```
 
 Bundled themes include:
 -default
@@ -188,10 +190,8 @@ if you would rather use css, you can extract the class definitions from within /
 There aren't many options out of the box however there are a few class modifiers:
 
 .cb__body--no-height on the .cb__body
-
 This will allow your content to grow and expand the candybrowser. Otherwise it will be constrained to a set aspect ratio of 1.5 .
 
 
 .cb__body--scrollable on the .cb__body
-
 If your content is larger than the frame but you would like to keep its aspect ratio, add this class which will add scrollbars to the content area.
