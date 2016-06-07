@@ -1,0 +1,44 @@
+.cb__buttons{
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  padding: 0 1%;
+  width: $cb-nav-buttons-width;
+  height: $cb-nav-height;
+  font-size: 0;
+}
+
+  .cb__back,
+  .cb__forward,
+  .cb__refresh{
+    display: inline-block;
+    height: $cb-nav-height;
+    width: 33.3333%;
+    line-height: $cb-nav-height;
+    text-decoration: none;
+    font-size: $cb-font-size*1.5;
+    text-align: center;
+    color: $cb-font-color;
+    backface-visibility: hidden;
+
+    &:before{
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+  .cb__back:before{
+    content: $cb-nav-buttons-back;
+  }
+
+  .cb__forward:before{
+    content: $cb-nav-buttons-forward;
+  }
+
+  .cb__refresh:before{
+    content: $cb-nav-buttons-refresh;
+    font-size: 0.75em;
+    vertical-align: baseline;
+    transform: rotate(90deg);
+  }
