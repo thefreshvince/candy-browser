@@ -5,7 +5,7 @@ $npm install candybrowser
 ```
 
 ##Candybrowser
-An HTML5, CSS3, and JS (optional) content frame used to display content like portfolio peices that need a surrounding and styled browser frame.
+An HTML5, CSS3, and JS (optional) content frame used to display portfolio pieces.
 
 ##Usage
 To get candybrowser working on your website, simply:
