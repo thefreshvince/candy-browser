@@ -1,0 +1,10 @@
+.DS_Store
+/assets
+/index.html
+.git
+/.gitignore
+/source/sass/site.scss
+/source/sass/site/
+/source/css
+/source/js/*.js
+!/source/js/candybrowser.js
