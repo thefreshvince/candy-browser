@@ -1,5 +1,9 @@
 [Official Site: http://thefreshvince.github.io/candy-browser](http://thefreshvince.github.io/candy-browser)
 
+```bash
+$npm install candybrowser
+```
+
 ##Candybrowser
 An HTML5, CSS3, and JS (optional) content frame used to display content like portfolio peices that need a surrounding and styled browser frame.
 
@@ -104,7 +108,7 @@ Bundled themes include:
 ###Sass Theming
 To create a quickly coated browser, you can add your theme name and base color to the $cb-themes map. Then you can simply use it by implementing the .cb__window--THEME on your .cb__window .
 
-```Sass
+```scss
 /* Found in the /dist/scss/candybrowser/_variables.scss */
 $cb-themes: (
   THEME: THEMECOLORVALUE,
