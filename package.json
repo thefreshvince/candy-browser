@@ -1,7 +1,7 @@
 {
-  "name": "browsercandy",
+  "name": "Browsercandy",
   "version": "1.0.0",
-  "description": "",
+  "description": "An HTML5, CSS3, and JS (optional) content frame.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
