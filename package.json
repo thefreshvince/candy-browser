@@ -1,6 +1,6 @@
 {
   "name": "Candybrowser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An HTML5, CSS3, and JS (optional) content frame.",
   "main": "index.js",
   "scripts": {

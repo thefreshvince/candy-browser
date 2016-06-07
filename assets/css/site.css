@@ -48,9 +48,9 @@ h2 {
     .splash .cb__content h1 {
       -webkit-transform: scale(0.5);
               transform: scale(0.5);
-      margin: 0 0 20px;
+      margin: 0 0 0px;
       font-size: 0;
-      height: 60px;
+      height: 20px;
       white-space: nowrap; }
       .splash .cb__content h1 span {
         display: inline-block;
@@ -87,6 +87,13 @@ h2 {
       font-size: 2em;
       -webkit-transform: scale(0.5);
               transform: scale(0.5); }
+    .splash .cb__content code {
+      color: #fff;
+      display: inline-block;
+      background-color: #9966CC;
+      margin-top: 20px;
+      padding: 5px 10px;
+      border-radius: 5px; }
   .splash .tada {
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
