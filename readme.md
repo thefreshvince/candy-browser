@@ -189,9 +189,10 @@ if you would rather use css, you can extract the class definitions from within /
 ##Options
 There aren't many options out of the box however there are a few class modifiers:
 
-.cb__body--no-height on the .cb__body
+**.cb__body--no-height on the .cb__body**
+
 This will allow your content to grow and expand the candybrowser. Otherwise it will be constrained to a set aspect ratio of 1.5 .
 
+**.cb__body--scrollable on the .cb__body**
 
-.cb__body--scrollable on the .cb__body
 If your content is larger than the frame but you would like to keep its aspect ratio, add this class which will add scrollbars to the content area.
