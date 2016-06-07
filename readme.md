@@ -75,7 +75,7 @@ The markup portion is relatively straight forward, just include the following so
 ```
 
 ###JS
-The corolation between a tab and it's content is made through the id/class of the content area and the tabs href. So href="#tab1" will show the element with id="tab1" or class="tab1".
+The correlation between a tab and it's content is made through the id/class of the content area and the tabs href. So href="#tab1" will show the element with id="tab1" or class="tab1".
 ```html
 ...
   <!-- Right before the closing body tag -->
@@ -115,7 +115,7 @@ $cb-themes: (
 );
 ```
 
-If you would like to be more explicit in your themeing, you can change any of the variables found within the _variables.scss file .
+If you would like to be more explicit in your theming, you can change any of the variables found within the _variables.scss file .
 
 ###CSS Theming
 if you would rather use css, you can extract the class definitions from within /dist/scss/candybrowser/_themes.scss and change the values on a per property basis.
