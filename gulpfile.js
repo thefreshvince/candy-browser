@@ -3,6 +3,7 @@ const gulp = require('gulp'),
   webserver = require('gulp-webserver'),
   sass = require('gulp-sass'),
   cssmin = require('gulp-cssmin'),
+  minify = require('gulp-minify'),
   autoprefixer = require('gulp-autoprefixer'),
   plumber = require('gulp-plumber'),
   notify = require('gulp-notify'),
@@ -43,9 +44,18 @@ gulp.task('sass', function(){
 
 gulp.task('js', function(){
 
+  const f_js = filter([
+      '**/browsercandy.js'
+    ], {restore: true});
+
   return gulp.src([
-      './source/js/prism.js'
+      './source/js/*.js'
     ])
+    .pipe(f_js)
+    .pipe(gulp.dest('./dist/js/'))
+    .pipe(minify())
+    .pipe(gulp.dest('./dist/js/'))
+    .pipe(f_js.restore)
     .pipe(gulp.dest('./assets/js/'));
 
 });
