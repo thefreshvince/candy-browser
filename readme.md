@@ -7,6 +7,11 @@ $npm install candybrowser
 ##Candybrowser
 An HTML5, CSS3, and JS (optional) content frame used to display portfolio pieces. [(examples)](http://thefreshvince.github.io/candy-browser)
 
+Screenshots of browsers suuuuuuuck! They detract from the feel of the site and the content held. Here are some reasons why a non graphic version of a web browser is a great solution:
+- Gives the ability to animate specific parts of it
+- Doesn't lose resolution when blown up or sized down
+- Theme it to fit whichever project's style, thus not detracting
+
 ##Usage
 To get candybrowser working on your website, simply:
 - Download the files (npm install candybrowser)
