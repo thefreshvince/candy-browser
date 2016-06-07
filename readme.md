@@ -12,7 +12,7 @@ To get candybrowser working on your website, simply:
 
 ###CSS
 Include the css in the head.
-```
+```html
 <head>
   <!-- Include the stylesheet in the head -->
   <link rel="stylesheet" href="path/to/candybrowser.css">
@@ -21,14 +21,14 @@ Include the css in the head.
 
 ###Sass
 Just reference the main partial in your sass and you're ready to go!
-```
+```scss
 /* import into a sass file */
 @import '.../dist/sass/candybrowser/main';
 ```
 
 ###HTML
 The markup portion is relatively straight forward, just include the following somewhere in the body.
-```
+```html
 <!-- insert the following markup into the body -->
 <article class="cb__window">
   <header class="cb__header">
@@ -76,7 +76,7 @@ The markup portion is relatively straight forward, just include the following so
 
 ###JS
 The corolation between a tab and it's content is made through the id/class of the content area and the tabs href. So href="#tab1" will show the element with id="tab1" or class="tab1".
-```
+```javascript
 ...
   <!-- Right before the closing body tag -->
   <script src="path/to/candybrowser.css" charset="utf-8"></script>
@@ -102,7 +102,7 @@ Bundled themes include:
 ###Sass Theming
 To create a quickly coated browser, you can add your theme name and base color to the $cb-themes map. Then you can simply use it by implementing the .cb__window--THEME on your .cb__window .
 
-```
+```Sass
 /* Found in the /dist/scss/candybrowser/_variables.scss */
 $cb-themes: (
   THEME: THEMECOLORVALUE,
@@ -118,7 +118,7 @@ If you would like to be more explicit in your themeing, you can change any of th
 ###CSS Theming
 if you would rather use css, you can extract the class definitions from within /dist/scss/candybrowser/_themes.scss and change the values on a per property basis.
 
-```
+```css
 .cb__window.cb__window--THEME{
   background-color: #f00;
   border-color: #f00;
