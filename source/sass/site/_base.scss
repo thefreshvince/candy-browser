@@ -26,5 +26,15 @@ h4,h5,h6{
 }
 
 .content-inner{
-  padding: $gutter-width;
+  color: #cc6668;
+  padding: $gutter-width $gutter-width*2;
+}
+
+.code-custom{
+  color: #fff;
+  display: inline-block;
+  background-color: #9966CC;
+  margin-top: 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
 }

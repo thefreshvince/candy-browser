@@ -63,21 +63,33 @@
                   </h1>
                   <p>
                     An HTML5, CSS3, and JS (optional) content frame. The most delicious way to implement browserception.
-                    <br/><br/><code>$npm install candybrowser</code>
+                    <br/><br/><code class="code-custom">$npm install candybrowser</code>
                   </p>
 
                 </div>
 
-                <div class="tab2" style="display: none;">
-                  <h2>Tab 2</h2>
-                </div>
-
                 <div class="tab3" style="display: none;">
-                  <h2>Tab 3</h2>
+                  <h2>Purple</h2>
                 </div>
 
                 <div class="tab4" style="display: none;">
-                  <h2>Tab 4</h2>
+                  <h2>Blue</h2>
+                </div>
+
+                <div class="tab5" style="display: none;">
+                  <h2>Green</h2>
+                </div>
+
+                <div class="tab6" style="display: none;">
+                  <h2>Orange</h2>
+                </div>
+
+                <div class="tab7" style="display: none;">
+                  <h2>Disco</h2>
+                </div>
+
+                <div class="tab2" style="display: none;">
+                  <h2>LAYERS</h2>
                 </div>
 
               </div>
@@ -117,7 +129,7 @@
 
   </section> -->
 
-  <section class="getting-started">
+  <section class="section">
 
     <div class="container">
 
@@ -131,9 +143,10 @@
           <nav class="cb__tabs">
 
             <a href="#getting-started__intro" class="cb__tab cb__tab--current"><h2>Getting Started</h2></a>
-            <a href="#getting-started__html" class="cb__tab"><h2>HTML</h2></a>
-            <a href="#getting-started__css" class="cb__tab"><h2>CSS</h2></a>
-            <a href="#getting-started__sass" class="cb__tab"><h2>SASS</h2></a>
+            <a href="#getting-started__html" class="cb__tab">HTML</a>
+            <a href="#getting-started__css" class="cb__tab">CSS</a>
+            <a href="#getting-started__sass" class="cb__tab">SASS</a>
+            <a href="#getting-started__js" class="cb__tab">JS (optional)</a>
 
           </nav>
           <div class="cb__nav">
@@ -144,7 +157,7 @@
             </div>
 
             <input type="text"
-                   value="&#128196; http://gettingstarted.com"
+                   value="&#128196; http://gettingstarted.candybrowser"
                    class="cb__address"
                    readonly />
 
@@ -232,9 +245,20 @@
             </div>
 
             <div class="getting-started__sass">
-              <pre><code class="language-sass">
+              <pre><code class="language-scss">
   /* import into a sass file */
   @import '.../dist/sass/candybrowser/main';</code>
+              </pre>
+            </div>
+
+            <div class="getting-started__js">
+              <pre><code class="language-html">
+  ...
+
+    &lt;!-- Right before the closing body tag --&gt;
+    &lt;script src=&quot;path/to/candybrowser.css&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+  &lt;/body&gt;</code>
               </pre>
             </div>
 
@@ -248,42 +272,235 @@
 
   </section>
 
-  <section>
+  <section class="section section--reverse">
 
-    <h2>Theming</h2>
-    <ul>
-      <li>Implementing a theme</li>
-      <li>Creating a theme</li>
-      <li>Advanced customizations</li>
-    </ul>
+    <div class="container">
 
+      <article class="cb__window">
+        <header class="cb__header">
+          <div class="cb__decorative-buttons">
+            <span class="cb__close"></span>
+            <span class="cb__minify"></span>
+            <span class="cb__fullscreen"></span>
+          </div>
+          <nav class="cb__tabs">
+
+            <a href="#theming__intro" class="cb__tab cb__tab--current"><h2>Theming</h2></a>
+            <a href="#theming__sass" class="cb__tab">SASS</a>
+            <a href="#theming__css" class="cb__tab">CSS</a>
+
+          </nav>
+          <div class="cb__nav">
+            <div class="cb__buttons">
+              <a href="#back" class="cb__back"></a>
+              <a href="#forward" class="cb__forward"></a>
+              <a href="#refresh" class="cb__refresh"></a>
+            </div>
+
+            <input type="text"
+                   value="&#128196; http://theming.candybrowser"
+                   class="cb__address"
+                   readonly />
+
+          </div>
+        </header>
+        <div class="cb__body cb__body--no-height">
+          <div class="cb__content">
+
+            <div class="theming__intro">
+              <div class="content-inner">
+
+                <p>
+                  Changing the theme of a window is just a matter of adding the class "cb__window--THEMENAME" where THEMENAME is the name of a/your theme:<br/><br/>
+                  <code class="language-html">&lt;article class=&quot;cb__window cb__window--THEME&quot;&gt;</code>
+                </p>
+
+                <p>
+                  If you've included the js, you can switch between themes along with the tabs by specifying the "data-theme" attribute like this:<br/><br/>
+                  <code class="language-HTML">&lt;a href=&quot;#theme&quot; data-theme=&quot;THEME&quot; class=&quot;cb__tab&quot;&gt;THEME&lt;/a&gt;</code>
+                </p>
+
+                <p>
+                  Bundled themes include:
+                </p>
+
+                <ul>
+                  <li>default</li>
+                  <li>purple</li>
+                  <li>blue</li>
+                  <li>green</li>
+                  <li>orange</li>
+                </ul>
+
+              </div>
+            </div>
+
+            <div class="theming__sass">
+
+              <div class="content-inner">
+
+                <p>To create a quickly coated browser, you can add your theme name and base color to the $cb-themes map. Then you can simply use it by implementing the .cb__window--THEME on your .cb__window .</p>
+
+                <pre><code class="language-scss">
+    /* Found in the /dist/scss/candybrowser/_variables.scss */
+    $cb-themes: (
+      THEME: THEMECOLORVALUE,
+      green: #6D8925,
+      blue: #4890C0,
+      orange: #FA6900,
+      purple: #9966CC
+    );</code>
+                </pre>
+
+              <p>If you would like to be more explicit in your themeing, you can change any of the variables found within the _variables.scss file.</p>
+
+            </div>
+
+          </div>
+
+          <div class="theming__css">
+
+            <div class="content-inner">
+
+              <p>If you would rather use css, you can extract the class definitions from within /dist/scss/candybrowser/_themes.scss and change the values on a per property basis.</p>
+
+              <pre><code class="language-css">
+    .cb__window.cb__window--THEME{
+      background-color: #f00;
+      border-color: #f00;
+    }
+
+    .cb__window.cb__window--THEME,
+    .cb__address{
+      color: #fff;
+      background: #0f0;
+      border: 1px solid #f00;
+    }
+
+    .cb__window.cb__window--THEME .cb__tab,
+    .cb__window.cb__window--THEME .cb__back,
+    .cb__window.cb__window--THEME .cb__forward,
+    .cb__window.cb__window--THEME .cb__refresh{
+      color: #0f0;
+      border: none;
+    }
+
+    .cb__window.cb__window--THEME .cb__tabs:before{
+      box-shadow: inset 0 1px 0px 0px #0f0;
+    }
+
+    .cb__window.cb__window--THEME .cb__tab{
+      background: #eee;
+    }
+
+    .cb__window.cb__window--THEME .cb__tab--current,
+    .cb__window.cb__window--THEME .cb__tab:hover{
+      background: #fff;
+    }
+
+
+    .cb__window.cb__window--THEME .cb__nav{
+      background: #fff;
+      border-color: #f00;
+    }
+
+    .cb__window.cb__window--THEME .cb__close:before, .cb__minify:before,
+    .cb__window.cb__window--THEME .cb__fullscreen:before{
+      border-color: #0f0;
+      background: #f00;
+    }
+
+    .cb__window.cb__window--THEME .cb__body{
+      color: #0f0;
+    }
+
+    .cb__window.cb__window--THEME *::selection {
+      background: #0f0;
+      color: #fff;
+    }
+
+    .cb__window.cb__window--THEME *::-moz-selection {
+      background: #0f0;
+      color: #fff;
+    }
+
+    .cb__window.cb__window--THEME *::-webkit-selection {
+      background: #0f0;
+      color: #fff;
+    }</code>
+              </pre>
+            </div>
+          </div>
+
+        </div>
+
+        </div>
+        <footer class="cb__footer">
+        </footer>
+      </article>
+
+    </div>
   </section>
 
-  <section>
+  <section class="section">
 
-    <h2>Options</h2>
+    <div class="container">
 
-    <ul>
-      <li>Theme</li>
-      <li>Scrollable content</li>
-      <li>Dynamic height</li>
-    </ul>
+      <article class="cb__window">
+        <header class="cb__header">
+          <div class="cb__decorative-buttons">
+            <span class="cb__close"></span>
+            <span class="cb__minify"></span>
+            <span class="cb__fullscreen"></span>
+          </div>
+          <nav class="cb__tabs">
 
-  </section>
+            <a href="#theming__intro" class="cb__tab cb__tab--current"><h2>Options</h2></a>
 
-  <section>
+          </nav>
+          <div class="cb__nav">
+            <div class="cb__buttons">
+              <a href="#back" class="cb__back"></a>
+              <a href="#forward" class="cb__forward"></a>
+              <a href="#refresh" class="cb__refresh"></a>
+            </div>
 
-    <h2>Examples</h2>
+            <input type="text"
+                   value="&#128196; http://theoptions.candybrowser"
+                   class="cb__address"
+                   readonly />
 
-    <ul>
-      <li>Scrollable content</li>
-      <li>Dynamic height</li>
-      <li>Tab Handling</li>
-      <li>Footer</li>
-      <li>Iframe</li>
-      <li>Advanced Transitions</li>
-      <li>Fun with Animate.css</li>
-    </ul>
+          </div>
+        </header>
+        <div class="cb__body cb__body--no-height">
+          <div class="cb__content">
+
+            <div class="content-inner">
+
+              <p>There aren't many options out of the box however there are a few class modifiers:</p>
+
+              <ul>
+                <li>
+                  <code class="code-custom">.cb__body--no-height</code> on the .cb__body
+                  <p>This will allow your content to grow and expand the candybrowser. Otherwise it will be constrained to a set aspect ratio of 1.5 .</p>
+                </li>
+                <li>
+                  <code class="code-custom">.cb__body--scrollable</code> on the .cb__body
+                  <p>If your content is larger than the frame but you would like to keep its aspect ratio, add this class which will add scrollbars to the content area.</p>
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+
+        </div>
+        <footer class="cb__footer">
+        </footer>
+      </article>
+
+    </div>
 
   </section>
 

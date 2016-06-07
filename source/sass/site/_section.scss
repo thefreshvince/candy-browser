@@ -1,5 +1,7 @@
-.getting-started{
+.section{
   position: relative;
+  display: flex;
+  align-items: center;
   box-sizing: border-box;
   padding: 100px $gutter-width;
   min-height: 100%;
@@ -12,5 +14,9 @@
     font-family: inherit;
     margin: 0;
     padding: 0;
+  }
+
+  &--reverse{
+    background: linear-gradient(45deg,#be66cc,#CC668E);
   }
 }

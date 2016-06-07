@@ -21,7 +21,16 @@ h2 {
   margin: 0 auto; }
 
 .content-inner {
-  padding: 20px; }
+  color: #cc6668;
+  padding: 20px 40px; }
+
+.code-custom {
+  color: #fff;
+  display: inline-block;
+  background-color: #9966CC;
+  margin-top: 20px;
+  padding: 5px 10px;
+  border-radius: 5px; }
 
 .splash {
   -webkit-perspective: 2000px;
@@ -87,13 +96,6 @@ h2 {
       font-size: 2em;
       -webkit-transform: scale(0.5);
               transform: scale(0.5); }
-    .splash .cb__content code {
-      color: #fff;
-      display: inline-block;
-      background-color: #9966CC;
-      margin-top: 20px;
-      padding: 5px 10px;
-      border-radius: 5px; }
   .splash .tada {
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
@@ -489,6 +491,9 @@ pre[class*="language-"] {
 .token.variable {
   color: #f8f8f2; }
 
+.token.variable {
+  color: #9bcc66; }
+
 .token.atrule,
 .token.attr-value,
 .token.function {
@@ -511,17 +516,26 @@ pre[class*="language-"] {
 .token.entity {
   cursor: help; }
 
-.getting-started {
+.section {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   box-sizing: border-box;
   padding: 100px 20px;
   min-height: 100%;
   background: #be66cc;
   background: -webkit-linear-gradient(315deg, #be66cc, #CC668E);
   background: linear-gradient(135deg, #be66cc, #CC668E); }
-  .getting-started h2 {
+  .section h2 {
     font-size: 1em;
     color: inherit;
     font-family: inherit;
     margin: 0;
     padding: 0; }
+  .section--reverse {
+    background: -webkit-linear-gradient(45deg, #be66cc, #CC668E);
+    background: linear-gradient(45deg, #be66cc, #CC668E); }
