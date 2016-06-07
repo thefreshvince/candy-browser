@@ -1,5 +1,5 @@
 {
-  "name": "Browsercandy",
+  "name": "Candybrowser",
   "version": "1.0.0",
   "description": "An HTML5, CSS3, and JS (optional) content frame.",
   "main": "index.js",
@@ -10,9 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "animate.css": "^3.5.1"
   },
   "devDependencies": {
+    "animate.css": "^3.5.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-cssmin": "^0.1.7",
