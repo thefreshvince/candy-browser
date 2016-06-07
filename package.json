@@ -1,5 +1,5 @@
 {
-  "name": "Candybrowser",
+  "name": "candybrowser",
   "version": "1.0.3",
   "description": "An HTML5, CSS3, and JS (optional) content frame.",
   "main": "index.js",
