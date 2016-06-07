@@ -8,7 +8,7 @@
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(45deg,lighten(#f00, 20%),lighten(#00f, 20%));
+  background: linear-gradient(45deg,#be66cc,#CC668E);
 
   .cb__content{
     text-align: center;
@@ -67,13 +67,6 @@
 .cb__window--disco{
   animation-name: Disco;
   animation-duration: 1.5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-.cb__window--rave{
-  animation-name: Rave;
-  animation-duration: 0.25s !important;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
