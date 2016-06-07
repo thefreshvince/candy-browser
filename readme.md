@@ -95,11 +95,11 @@ If you've included the js, you can switch between themes along with the tabs by 
 ```
 
 Bundled themes include:
--default
--purple
--blue
--green
--orange
+- default
+- purple
+- blue
+- green
+- orange
 
 ###Sass Theming
 To create a quickly coated browser, you can add your theme name and base color to the $cb-themes map. Then you can simply use it by implementing the .cb__window--THEME on your .cb__window .
