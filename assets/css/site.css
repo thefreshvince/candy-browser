@@ -20,6 +20,9 @@ h2 {
   max-width: 800px;
   margin: 0 auto; }
 
+.content-inner {
+  padding: 20px; }
+
 .splash {
   -webkit-perspective: 2000px;
           perspective: 2000px;
@@ -507,8 +510,8 @@ pre[class*="language-"] {
   padding: 100px 20px;
   min-height: 100%;
   background: #be66cc;
-  background: -webkit-linear-gradient(bottom, #be66cc, #CC668E);
-  background: linear-gradient(0deg, #be66cc, #CC668E); }
+  background: -webkit-linear-gradient(315deg, #be66cc, #CC668E);
+  background: linear-gradient(135deg, #be66cc, #CC668E); }
   .getting-started h2 {
     font-size: 1em;
     color: inherit;

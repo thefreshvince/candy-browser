@@ -24,3 +24,7 @@ h4,h5,h6{
   max-width: 800px;
   margin: 0 auto;
 }
+
+.content-inner{
+  padding: $gutter-width;
+}
