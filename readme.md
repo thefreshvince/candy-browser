@@ -8,7 +8,7 @@ $npm install candybrowser
 An HTML5, CSS3, and JS (optional) content frame used to display portfolio pieces. [(examples)](http://thefreshvince.github.io/candy-browser)
 
 Screenshots of browsers suuuuuuuck! They detract from the feel of the site and the content held. Here are some reasons why a non graphic version of a web browser is a great solution:
-- Gives the ability to animate specific parts of it
+- Gives the ability to animate specific parts
 - Doesn't lose resolution when blown up or sized down
 - Theme it to fit whichever project's style, thus not detracting
 
@@ -84,7 +84,7 @@ The markup portion is relatively straight forward, just include the following so
 ```
 
 ###JS
-The correlation between a tab and it's content is made through the id/class of the content area and the tabs href. So href="#tab1" will show the element with id="tab1" or class="tab1".
+The correlation between a tab and its content is made through the id/class of the content area and the tabs href. So href="#tab1" will show the element with id="tab1" or class="tab1".
 ```html
 ...
   <!-- Right before the closing body tag -->
