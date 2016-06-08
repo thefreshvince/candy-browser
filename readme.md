@@ -88,7 +88,7 @@ The correlation between a tab and its content is made through the id/class of th
 ```html
 ...
   <!-- Right before the closing body tag -->
-  <script src="path/to/candybrowser.css" charset="utf-8"></script>
+  <script src="path/to/candybrowser.js" charset="utf-8"></script>
 </body>
 ```
 
